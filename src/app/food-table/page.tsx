@@ -1,4 +1,4 @@
-import { FoodItemTable, SendToHomePage } from "@/types/types";
+import { FoodItemTable, SendToHomePage, Title } from "@/types/types";
 
 export default function FoodTablePage() {
     const foodItems = [
@@ -11,15 +11,12 @@ export default function FoodTablePage() {
     return (
         <main className="flex flex-col bg-dark min-h-screen p-6">
             <SendToHomePage />
-
-            <h1 className="text-4xl font-bold mb-6 text-purple-500 text-center">
-                Basic table with food items
-            </h1>
+            <Title text="Basic table with food items" />
 
             <div>
                 <FoodItemTable foodItems={foodItems} />
             </div>
 
         </main>
-    )
+    );
 }

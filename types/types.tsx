@@ -4,15 +4,20 @@ interface CardProps {
     title: string;
     description: string;
     link: string;
+    src: string;
+    alt: string;
 }
 
-export default function Card({ title, description, link }: CardProps) {
+export default function Card({ title, description, link, src, alt }: CardProps) {
     return (
-        <div className="text-lg bg-gray-700 content-center rounded-lg border w-100 h-30 text-center">
+        <div className="text-lg bg-slate-700 content-center rounded-lg border w-100 h-30 text-center">
             <p className="mb-2">{description}</p>
-            <Link href={link} className="text-purple-500 hover:underline">
-                {title}
-            </Link>
+            <div className="flex items-center justify-center">
+                <img src={src} alt={alt} className="w-5 h-5" />
+                <Link href={link} className="text-purple-500 hover:underline">
+                    {title}
+                </Link>
+            </div>
         </div>
     )
 }
@@ -58,9 +63,12 @@ export function FoodItemTable({ foodItems }: FoodItemTableProps) {
 
 export function SendToHomePage() {
     return (
-        <Link href="/" className="text-purple-500 hover:underline text-lg">
-            Home Page
-        </Link>
+        <div className='flex items-center'>
+            <img src="/images/home.png" alt="Home Icon" className="w-5 h-5" />
+            <Link href="/" className="text-purple-500 hover:underline text-lg">
+                Home Page
+            </Link>
+        </div>
     );
 }
 
@@ -77,4 +85,12 @@ export function ImageCard({ src, alt, name }: ImageProps) {
             <p className="text-center text-white">{name}</p>
         </div>
     )
+}
+
+export function Title({ text }: { text: string }) {
+    return (
+        <h1 className="text-4xl font-bold mb-6 text-purple-500 text-center">
+            {text}
+            </h1>
+    );
 }

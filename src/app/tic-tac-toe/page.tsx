@@ -1,13 +1,12 @@
 import Board from "@/components/Board";
-import { SendToHomePage } from "@/types/types";
+import { SendToHomePage, Title } from "@/types/types";
 
 export default function TicTacToePage() {
     return (
         <main className="flex flex-col">
             <SendToHomePage />
-
+            <Title text="Tic Tac Toe Game" />
             <div className="flex flex-col items-center bg-dark min-h-screen p-6">
-                <h1 className="text-4xl font-bold mb-6 text-purple-500">Tic Tac Toe</h1>
                 <Board />
             </div>
         </main>

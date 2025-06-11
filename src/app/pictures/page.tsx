@@ -1,13 +1,11 @@
-import { SendToHomePage, ImageCard } from '@/types/types';
+import { SendToHomePage, ImageCard, Title } from '@/types/types';
 
 export default function PicturesPage() {
     return (
         <main className="flex flex-col bg-dark">
             <SendToHomePage />
 
-            <h1 className="text-4xl font-bold mb-6 text-purple-500 text-center">
-                The Best Animals!
-            </h1>
+            <Title text="The Best Animals!" />
 
             <div className="flex flex-col bg-dark min-h-screen p-6 max-w-2/3 mx-auto">
                 <h1 className="text-2xl font-bold mb-6 text-blue-500">
