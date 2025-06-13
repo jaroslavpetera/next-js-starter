@@ -10,7 +10,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Utilities
 
-This was my learning project for Next.js
+This was my learning project for Next.js  
 Stuff I learned:
 - Creating tables
 - Working with images
