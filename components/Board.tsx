@@ -7,7 +7,7 @@ import type { Board, Player } from '../types/game';
 import ResetButton from './ResetButton';
 
 export default function Board() {
-    const [board, setBoard] = useState<Board>(Array(9).fill(null));
+    const [board, setBoard] = useState<Board>(Array(25).fill(null));
     const [currentPlayer, setCurrentPlayer] = useState<Player>('X');
     const [winner, setWinner] = useState<Player | null>(null);
     const [draw, setDraw] = useState<boolean>(false);
@@ -31,7 +31,7 @@ export default function Board() {
     }
 
     function handleReset() {
-        setBoard(Array(9).fill(null));
+        setBoard(Array(25).fill(null));
         setCurrentPlayer('X');
         setWinner(null);
         setDraw(false);
@@ -39,7 +39,7 @@ export default function Board() {
 
     return (
         <div className="flex flex-col items-center">
-            <div className="grid grid-cols-3 gap-2 mb-4">
+            <div className="grid grid-cols-5 gap-2 mb-4">
                 {board.map((value, index) => (
                     <Square key={index} value={value} onClick={() => handleSquareClick(index)} />
                 ))}

@@ -16,7 +16,6 @@ export default function Square({ value, onClick }: SquareProps) {
         return '';
     }
 
-
     return (
         <button
             onClick={onClick}
