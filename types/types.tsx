@@ -22,7 +22,6 @@ export default function Card({ title, description, link, src, alt }: CardProps) 
     )
 }
 
-
 interface FoodItemTableProps {
     foodItems: {
         name: string;
@@ -89,8 +88,13 @@ export function ImageCard({ src, alt, name }: ImageProps) {
 
 export function Title({ text }: { text: string }) {
     return (
-        <h1 className="text-4xl font-bold mb-6 text-purple-500 text-center">
-            {text}
-        </h1>
+        <div>
+
+            <h1 className="text-8xl font-bold mb-6 text-purple-500 text-center">
+                {text}
+            </h1>
+            <hr className="border-t-3 mb-6" />
+        </div>
     );
 }
+

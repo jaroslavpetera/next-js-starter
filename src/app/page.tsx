@@ -12,6 +12,7 @@ export default function HomePage() {
         <Card title="Food table" description='Here you can see some food items!' link="/food-table" src="/images/food.png" alt="Food" />
         <Card title="Pictures" description="Here you can see some pictures!" link="/pictures" src="images/pic.png" alt="Pic" />
         <Card title="To Do List" description="Here you can manage your tasks!" link="/todo-list" src="/images/todo.png" alt="ToDo" />
+        <Card title="Animals" description="Here you can see some awesome animals!" link="/animals" src="/images/turtle.png" alt="Animals" />
       </div>
     </main>
   );
